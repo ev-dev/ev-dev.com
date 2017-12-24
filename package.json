@@ -1,0 +1,60 @@
+{
+  "name": "ev-dev-starter",
+  "version": "0.4.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "NODE_ENV=development webpack -w --progress",
+    "serve-dev": "NODE_ENV=development nodemon -r @std/esm server --watch server",
+    "dev": "yarn run serve-dev & yarn run build-dev",
+    "test": "nodemon tests/testServer.js --watch tests",
+    "build": "NODE_ENV=production webpack",
+    "serve": "NODE_ENV=production node server",
+    "start": "NODE_ENV=production yarn run build & yarn run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "@std/esm": {
+    "esm": "all",
+    "cjs": {
+      "interop": true,
+      "namedExports": true,
+      "paths": true,
+      "vars": true
+    },
+    "debug": true,
+    "sourceMap": true,
+    "warnings": false
+  },
+  "dependencies": {
+    "@std/esm": "^0.18.0",
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "bulma": "^0.6.1",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react-app": "^3.1.0",
+    "babel-runtime": "^6.26.0",
+    "chalk": "^2.3.0",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.7.2",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "volleyball": "^1.4.1",
+    "webpack": "^3.10.0",
+    "webpack-livereload-plugin": "^1.0.0"
+  }
+}
