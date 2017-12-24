@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
-const pages = ['Home', 'About', 'Projects']
+import { EntypoHome } from 'react-entypo'
 
 class SideNav extends Component {
   state = {
@@ -9,7 +8,6 @@ class SideNav extends Component {
   }
 
   toggleSideNav = () => {
-    console.log('toggling sidenav...')
     this.setState({ sideNavIsHidden: !this.state.sideNavIsHidden })
   }
 
@@ -21,31 +19,32 @@ class SideNav extends Component {
         </header>
         <nav role="navigation">
           <ul>
-            <li className="Sidebar-navItem">
-              <i className="Sidebar-menuIcon fa fa-bar-chart"></i>
-              <a href="">Performance</a>
+            <li className="Sidebar-navItem">          
+              {/* <i className="Sidebar-menuIcon ion-ios-home-outline"></i> */}
+              <EntypoHome />
+              <a href="">Home</a>
             </li>
-            <li className="Sidebar-navItem">
-              <i className="Sidebar-menuIcon fa fa-shopping-cart"></i>
-              <a href="#">Activities</a>
+            <li className="Sidebar-navItem">          
+              <i className="Sidebar-menuIcon ion-ios-person-outline"></i>
+              <a href="#">About</a>
             </li>
-            <li className="Sidebar-navItem">
-              <i className="Sidebar-menuIcon fa fa-cog"></i>
-              <a href="#">Settings</a>
+            <li className="Sidebar-navItem">          
+              <i className="Sidebar-menuIcon ion-ios-home-outline"></i>
+              <a href="#">Projects</a>
             </li>
-            <li className="Sidebar-navItem">
-              <i className="Sidebar-menuIcon fa fa-question-circle"></i>
-              <a href="#">Help & Support</a>
+            <li className="Sidebar-navItem">          
+              <i className="Sidebar-menuIcon ion-ios-home-outline"></i>
+              <a href="#">Blog</a>
             </li>
-            <li className="Sidebar-navItem">
-              <i className="Sidebar-menuIcon fa fa-sign-out"></i>
-              <a href="#">Log out</a>
+            <li className="Sidebar-navItem">          
+              <i className="Sidebar-menuIcon ion-ios-home-outline"></i>
+              <a href="#">Contact</a>
             </li>
           </ul>
         </nav>
         <footer className="Sidebar-footer" onClick={this.toggleSideNav}>
           <i className={`Sidebar-toggleArrow Sidebar-menuIcon fa fa-arrow-left ${this.state.sideNavIsHidden && 'rotate'}`}></i>
-          <span className="Sidebar-toggleText">Minimize menu</span>
+          <span className="Sidebar-toggleText">Minimize</span>
         </footer>
       </div>
     )

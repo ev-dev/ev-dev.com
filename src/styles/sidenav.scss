@@ -115,7 +115,9 @@ a {
   display: inline-block;
   width: 80px;
   height: 80px;
-  background: #5f9ea0;
+  background-color: #5f9ea0;
+  background-image: url("../assets/portfolio_photo_thumb.jpg");
+  background-size: 100%;
   -webkit-transition: height 0.4s ease, width 0.4s ease, -webkit-transform 0.4s ease;
   transition: height 0.4s ease, width 0.4s ease, -webkit-transform 0.4s ease;
   transition: transform 0.4s ease, height 0.4s ease, width 0.4s ease;
@@ -228,7 +230,8 @@ a {
 }
 
 .Sidebar-menuIcon {
-  color: #818181;
+  // color: #818181;
+  color: white;
 }
 
 .Sidebar-menuIcon:not(.Sidebar-toggleArrow) {

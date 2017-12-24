@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Routes from './routes'
 import SideNav from './components/SideNav'
+// import 'ionicons/dist/scss/ionicons'
 import './styles'
 
 const App = () => (

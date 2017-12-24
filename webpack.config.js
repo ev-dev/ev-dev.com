@@ -25,7 +25,7 @@ module.exports = {
         test: /\.(css|scss|sass)$/,
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules', 'font-awesome')
+          path.resolve(__dirname, 'node_modules', 'ionicons')
         ],
         use: [
           require.resolve('style-loader'),
@@ -61,6 +61,10 @@ module.exports = {
       {
         test: /\.(svg|ttf|eot|eof|woff|woff2)$/,
         loader: require.resolve('file-loader')
+      },
+      {
+        test: /\.(png|jpg|jpeg)$/,
+        loader: require.resolve('url-loader')
       }
     ]
   },

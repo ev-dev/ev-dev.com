@@ -1,5 +1,7 @@
-node_modules
 .DS_Store
 .esm-cache
 .vscode
+
+node_modules
 dist/bundle*
+*.log
