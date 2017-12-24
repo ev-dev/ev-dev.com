@@ -22,7 +22,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss|sass)$/,
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'node_modules', 'font-awesome')
@@ -52,6 +52,9 @@ module.exports = {
                 })
               ]
             }
+          },
+          {
+            loader: require.resolve('sass-loader')
           }
         ]
       },
@@ -62,7 +65,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.json', '.js', '.jsx', '.css', '*'],
+    extensions: ['.json', '.js', '.jsx', '.css', '.scss', '.sass', '*'],
     alias: {
       'babel-runtime': path.dirname(
         require.resolve('babel-runtime/package.json')

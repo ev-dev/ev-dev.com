@@ -3,11 +3,15 @@ import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Routes from './routes'
+import SideNav from './components/SideNav'
 import './styles'
 
 const App = () => (
-  <div>
-    <Routes />
+  <div className='Wrapper'>
+    <SideNav />
+    <div className='Main'>
+      <Routes />
+    </div>
   </div>
 )
 
